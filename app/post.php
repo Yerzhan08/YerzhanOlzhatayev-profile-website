@@ -9,5 +9,5 @@ class post extends Model
 {
     
     protected $table = "post";
-
+    protected $filltable =['id','title','body'];
 }
