@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Posts;
+use App\post;
+
 class BlogController extends Controller
 {
-   public function index($id) {
-     return "ID is :". $id;
-   }
+    public function index(){
+        $post = post::all();
+        return view('blog.index')->with(['post' => $post]);
+}
 }
